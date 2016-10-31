@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>FindArticleServlet</servlet-name>
+  	<servlet-class>
+  		com.tang.web.FindArticleServlet
+  	</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FindArticleServlet</servlet-name>
+  	<url-pattern>/servlet/FindArticleServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ArticleUI</servlet-name>
+  	<servlet-class>
+  		com.tang.ui.ArticleUI
+  	</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ArticleUI</servlet-name>
+  	<url-pattern>/servlet/ArticleUI</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ShowArticleServlet</servlet-name>
+  	<servlet-class>
+  		com.tang.web.ShowArticleServlet
+  	</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ShowArticleServlet</servlet-name>
+  	<url-pattern>/servlet/ShowArticleServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
