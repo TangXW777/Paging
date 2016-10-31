@@ -1,3 +1,10 @@
+﻿这是通过jquery实现的一个分页插件
 
+详细方法参考：http://www.zhangxinxu.com/jq/pagination_zh/
 
+注意点：
+1.因为pageCount(数据库的总数量)在使用pagination要传入，所以在显示要分页的内容前
+  必须通过后台获取到数据库的总数量，例子中的做法是在showarticle.jsp之前，通过
+  ShowArticleServlet来获取数量，通过session传到showarticle.jsp的<input type="hiddent"/>中，然后通过js .val()获取。
 
+2.因为要实现无刷新的分页，所以link_to后面跟一个#(锚点，锚点不会重新加载页面),不  然每次都是打开新的链接，是先不了分页，当然，你也可以用在<body>中设置一个锚点(name,id)，然后每次分页的时候都跳到这个锚点。
